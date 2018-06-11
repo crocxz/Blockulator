@@ -29,14 +29,15 @@ export class KeypadComponent implements OnInit {
     switch (key) {
     case '=':
       try {
-        // this.displayService.setResult(1);
-        const res = math.eval(this.displayService.getInput()).toFixed(8);
-        // round(val, dec) = Number(Math.round(value+'e'+decimals)+'e-'+decimals)
+        let res = math.eval(this.displayService.getInput());
+        const round = (num) => {
+          return Math.round(num * 100000000) / 100000000;
+        };
+        res = round(res);
         console.log(res);
         this.displayService.setResult(res);
         this.listService.appendList(this.displayService.getInput() + ' = ' + res);
         this.displayService.setInput(res);
-
       } catch (e) {
         if (e instanceof SyntaxError) {
             this.displayService.setResult('Syntax Error');
