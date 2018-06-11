@@ -1,0 +1,24 @@
+    /* HeroesComponent's private CSS styles */
+    .pallete {
+        color:#1FB1C4;
+        color: #E3AD36;
+        color: #2C2B2A;
+        color: #76D1D9;
+        color: #2BA2B5;
+    }
+    .selected {
+        background-color: #CFD8DC !important;
+        color: white;
+      }
+      .key {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(205, 237, 241);
+      }
+
+     
+    
+
+    
+     
