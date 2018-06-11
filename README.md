@@ -1,4 +1,16 @@
 # CalcApp
+This webapp was built by William Xu for the technical assessment for Blockchain Intelligence Group.  
+
+To run:
+1. Make sure node is installed, then 'npm install -g @angular/cli'
+2. Clone the repo 
+3. Run 'npm install' to get dependencies
+4. Serve the app by 'ng serve' and navigate to `http://localhost:4200/` to find it
+
+What is done:
+Everything but test cases and deployment script.
+
+------------------------------------------------------------------
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
