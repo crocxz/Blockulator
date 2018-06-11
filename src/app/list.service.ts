@@ -7,24 +7,28 @@ import { EventEmitter } from '@angular/core';
 
 export class ListService {
 
-  public exps: string[] = ['2+2=4', 'quickmaths'];
+  public exps: string[] = ['2+2=4', '10x10=100'];
   public listUpdated: EventEmitter<any> = new EventEmitter();
 
   clearList() {
     this.exps = [];
     this.onListChange(this.exps);
   }
+
   getList() {
     return this.exps;
   }
+
   appendList(item: string) {
     this.exps.push(item);
     this.onListChange(this.exps);
   }
+  
+  // emits event to update list visually when expressions are added from keypad '='
   onListChange(value) {
     this.exps = value;
     this.listUpdated.emit(this.exps);
-    console.log('l emit ' + this.exps);
   }
+
   constructor() { }
 }
