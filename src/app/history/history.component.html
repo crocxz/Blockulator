@@ -1,11 +1,19 @@
-<div>
+<div class="history">
+<div class="row justify-content-start">
+  <div class="col-12 col-md-10">
     <button mat-icon-button (click)="deleteAll()">
-        <mat-icon aria-label="Example icon-button with a clear icon">clear-all</mat-icon>
+        <mat-icon aria-label="Example icon-button with a clear icon">clear_all</mat-icon>
     </button>
+  </div>
 </div>
+<div class="row justify-content-start">
+  <div class="col-12 col-md-10">
     History:
       <mat-list role="list" *ngFor="let exp of exps">
         <mat-list-item role="listitem">{{ exp }}
         </mat-list-item>
         <mat-divider></mat-divider>
       </mat-list>
+  </div>
+</div>
+</div>

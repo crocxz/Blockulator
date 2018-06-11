@@ -10,13 +10,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatListModule, MatIconModule, MatButtonModule, MatCardModule, MatInputModule, MatGridListModule } from '@angular/material';
 import { DisplayService } from 'src/app/display.service';
 import { ListService } from 'src/app/list.service';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     KeypadComponent,
     HistoryComponent,
-    DisplayComponent
+    DisplayComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule, FormsModule, MatButtonModule, MatCardModule, MatGridListModule,

@@ -1,8 +1,10 @@
-
-<mat-grid-list class="keypad" cols="4" rowHeight="1:1">
-  <mat-grid-tile *ngFor="let key of keys" 
-  [class.selected]="key === pressedKey"
-  >
-    <button mat-button class="key" (click)=onClick(key)>{{key}}</button>
-  </mat-grid-tile>
-</mat-grid-list> 
+<div class="row justify-content-center">
+  <div class="col-12 col-md-10">
+    <mat-grid-list class="keypad" cols="4" rowHeight="1:1">
+      <mat-grid-tile *ngFor="let key of keys" 
+       [class.selected]="key === pressedKey">
+        <button mat-button class="key" (click)=onClick(key)>{{key}}</button>
+      </mat-grid-tile>
+    </mat-grid-list> 
+  </div>
+</div>

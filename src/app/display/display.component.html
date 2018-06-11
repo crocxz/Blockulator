@@ -1,5 +1,13 @@
-<mat-form-field>
-  <mat-label></mat-label>
-  <input matInput [(ngModel)]="input" placeholder="you can also enter expression here">
-</mat-form-field>
-<mat-card>{{result}}</mat-card>
+<div class="row justify-content-center">
+  <div class="col-12 col-md-10">
+    <mat-form-field class="inputbox">
+      <mat-label></mat-label>
+        <input matInput [(ngModel)]="input" placeholder="">
+    </mat-form-field>
+  </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-12 col-md-10">
+    <mat-card class="resultbox">{{result}}</mat-card>
+  </div>
+</div>

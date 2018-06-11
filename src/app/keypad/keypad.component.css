@@ -6,10 +6,25 @@
         color: #76D1D9;
         color: #2BA2B5;
     }
-    .selected {
-        background-color: #CFD8DC !important;
-        color: white;
-      }
+   
+    @media all and (min-width: 900px) {
+         .key { 
+             font-size: 30px;
+        }
+    }
+
+    @media all and (max-width: 899px) and (min-width: 600px) {
+        .key{
+            font-size: 5vw;
+          }
+        }
+        
+        @media all and (max-width: 599px) and (min-width: 50px) {
+        .key{
+            font-size: 6vw;
+          }
+        }
+
       .key {
         display: block;
         width: 100%;
@@ -17,8 +32,6 @@
         background-color: rgb(205, 237, 241);
       }
 
-     
-    
-
-    
-     
+      .key:hover {
+          background-color: rgb(255, 221, 109);
+      }

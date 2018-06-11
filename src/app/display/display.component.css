@@ -1,0 +1,21 @@
+.inputbox {
+    width: 100%;
+}
+
+@media all and (min-width: 900px) {
+    .resultbox .inputbox {
+        font-size: 5vw;
+     }
+    }
+
+@media all and (max-width: 899px) and (min-width: 600px) {
+    .resultbox .inputbox {
+       font-size: 5vw;
+     }
+   }
+   
+   @media all and (max-width: 599px) and (min-width: 50px) {
+    .resultbox .inputbox {
+        font-size: 6vw;
+     }
+   }
