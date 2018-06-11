@@ -4,6 +4,7 @@ import {MatButtonModule, MatCardModule, MatListModule, MatInputModule, MatGridLi
 
 import * as math from 'mathjs';
 import {DisplayService} from '../display.service';
+import {ListService} from '../list.service';
 
 @Component({
   selector: 'app-keypad',
@@ -17,29 +18,42 @@ export class KeypadComponent implements OnInit {
                     '4', '5', '6', '-',
                     '1', '2', '3', '*',
                     '0', '.', '=', '/'];
+  exps: string[];
 
-  constructor(private displayService: DisplayService) { }
+  constructor(private displayService: DisplayService, private listService: ListService) {}
 
   ngOnInit() {
   }
 
   onClick(key: string) {
-    if (key === '=') {
+    switch (key) {
+    case '=':
       try {
         // this.displayService.setResult(1);
         const res = math.eval(this.displayService.getInput()).toFixed(8);
         // round(val, dec) = Number(Math.round(value+'e'+decimals)+'e-'+decimals)
         console.log(res);
         this.displayService.setResult(res);
+        this.listService.appendList(this.displayService.getInput() + ' = ' + res);
         this.displayService.setInput(res);
 
       } catch (e) {
         if (e instanceof SyntaxError) {
-            this.displayService.setResult('000');
+            this.displayService.setResult('Syntax Error');
             this.displayService.clearInput();
         }
-      }
-    } else {
+      } break;
+
+    case 'C':
+      this.displayService.clearInput();
+      this.displayService.clearResult();
+      break;
+
+    case '<':
+      this.displayService.backspaceInput();
+      break;
+
+    default:
       this.displayService.appendInput(key);
       console.log(this.displayService.getInput());
     }

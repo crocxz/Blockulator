@@ -7,8 +7,9 @@ import { KeypadComponent } from './keypad/keypad.component';
 import { HistoryComponent } from './history/history.component';
 import { DisplayComponent } from './display/display.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCardModule, MatInputModule, MatGridListModule } from '@angular/material';
+import { MatListModule, MatIconModule, MatButtonModule, MatCardModule, MatInputModule, MatGridListModule } from '@angular/material';
 import { DisplayService } from 'src/app/display.service';
+import { ListService } from 'src/app/list.service';
 
 @NgModule({
   declarations: [
@@ -19,9 +20,9 @@ import { DisplayService } from 'src/app/display.service';
   ],
   imports: [
     BrowserModule, FormsModule, MatButtonModule, MatCardModule, MatGridListModule,
-   MatInputModule, BrowserAnimationsModule
+   MatInputModule, BrowserAnimationsModule, MatIconModule, MatListModule
   ],
-  providers: [DisplayService],
+  providers: [DisplayService, ListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

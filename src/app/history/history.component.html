@@ -1,7 +1,11 @@
-<div ng-app="todoApp" ng-controller="todoController">
-  <form ng-submit="add()">
-  <input ng-model="title"><button>Add</button>
-  </form>
-  <ul>
-      <li ng-repeat="t in tasks track by $index">{{ t }} <button ng-click="delete()">x</button></li>
-  </ul>
+<div>
+    <button mat-icon-button (click)="deleteAll()">
+        <mat-icon aria-label="Example icon-button with a clear icon">clear-all</mat-icon>
+    </button>
+</div>
+    History:
+      <mat-list role="list" *ngFor="let exp of exps">
+        <mat-list-item role="listitem">{{ exp }}
+        </mat-list-item>
+        <mat-divider></mat-divider>
+      </mat-list>
