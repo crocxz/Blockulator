@@ -17,5 +17,6 @@
    @media all and (max-width: 599px) and (min-width: 50px) {
     .resultbox .inputbox {
         font-size: 6vw;
+        min-width: 100vw;
      }
    }

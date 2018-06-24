@@ -10,7 +10,9 @@
     @media all and (min-width: 900px) {
          .key { 
              font-size: 30px;
+             
         }
+        
     }
 
     @media all and (max-width: 899px) and (min-width: 600px) {
@@ -22,6 +24,7 @@
         @media all and (max-width: 599px) and (min-width: 50px) {
         .key{
             font-size: 6vw;
+            min-width: 100vw;
           }
         }
 
